@@ -1,4 +1,5 @@
-require('dotenv').config()
+// require('dotenv').config()
+import { Address } from "./Env_var"
 const abi = [
 	{
 		"inputs": [
@@ -54,7 +55,7 @@ const abi = [
 	}
 ]
 // const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3' // hardhat LocalHost
-const address=process.env.Address  //Alchemy API-KEY 
+const address=Address  //Alchemy API-KEY 
 
 const bala = document.querySelector("#bala")
 const bala_address = document.querySelector("#bala-address")
@@ -110,3 +111,4 @@ form.addEventListener('submit',(e)=> handleIt(e))
 
 
 load()
+console.log('process.env');
